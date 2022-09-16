@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/pokemon', (req, res) => {
-  res.send(`pokemon index`);
+  res.send(`Welcome to the Pokemon App!`);
 })
 
 app.listen(PORT, () => {
