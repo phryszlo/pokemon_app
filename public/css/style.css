@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Bungee+Shade&family=Butcherman&family=Faster+One&family=Irish+Grover&display=swap');
+
+:root {
+  --p1: url('http://img.pokemondb.net/artwork/bulbasaur.jpg');
+  --p2: url('http://img.pokemondb.net/artwork/ivysaur.jpg');
+  --p3: url('http://img.pokemondb.net/artwork/venusaur.jpg');
+  --p4: url('http://img.pokemondb.net/artwork/charmander.jpg');
+  --p4: url('http://img.pokemondb.net/artwork/charizard.jpg');
+  --p5: url('http://img.pokemondb.net/artwork/squirtle.jpg');
+  --p6: url('http://img.pokemondb.net/artwork/wartortle.jpg');
+}
+
+
+body {
+  margin: 0;
+  background: linear-gradient(90deg, #18053e, lime 300%);
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+
+  /* font-family: 'Blaka Ink', cursive; */
+/* font-family: 'Bungee Shade', cursive; */
+/* font-family: 'Butcherman', cursive; */
+/* font-family: 'Faster One', cursive; */
+font-family: 'Irish Grover', cursive;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: flex-start; */
+  width: 35vw;
+  height: 50%;
+  margin: auto;
+  /* border: 4px solid fuchsia; */
+}
+
+.show-div {
+  margin-top: 2em;
+  align-items: center;
+}
+
+.show-div * {
+  color: silver;
+  display: block;
+}
+
+.show-div img {
+  width: 300px;
+  border: 3px inset #333;
+  border-radius: 20%;
+  box-shadow: 5px 5px 5px 5px #366;
+  filter: none;
+}
+.show-div img.inverted {
+  filter: invert();
+}
+
+.poke-scroller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+}
+.poke-scroller a {
+  font-size: 30px;
+  filter:invert() hue-rotate(25deg);
+  transform: rotate(1deg);
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header {
+
+  font-family: 'Blaka Ink', cursive;
+  letter-spacing: .2pc;
+  font-size: 59px;
+  color: rgb(218, 235, 217);
+  text-shadow: 2px 2px rgb(38, 227, 21);
+  width: fit-content;
+  white-space: nowrap;
+  margin: auto;
+  /* border: 3px solid green; */
+}
+.poke-subhead {
+  color: #05815e;
+  letter-spacing: .3pc;
+  text-shadow: .7px .9px skyblue;
+}
+
+.index-li {
+  list-style: georgian;
+  font-size: 30px;
+  margin-left: -2em;
+}
+
+.poke-index-link {
+  color: #9ffc;
+}
+
+a {
+  color: #26d7;
+  text-shadow: .2px .2px rgb(8, 59, 59);
+  text-decoration: none;
+}
+
+a:visited {
+  color: #26d7;
+}
