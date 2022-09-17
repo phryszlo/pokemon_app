@@ -15,6 +15,7 @@ class Index extends React.Component {
     const pokemon = this.props.pokemon;
     const index = this.props.index;
     const max = this.props.max;
+    const inverted = this.props.inverted ? 'inverted' : '';
     let prev, next = index;
 
     prev = parseInt(index) === 0 ? max : parseInt(index) - 1
@@ -24,17 +25,25 @@ class Index extends React.Component {
     const image = pokemon.img + '.jpg';
     return (
       <div>
-        <h1 className="header">Gotta Catch 'Em All</h1>
+        <div className="head-container">
+          <h1 className="header">Gotta Catch 'Em All</h1>
+          <a className="poke-index-link" href="/">PokeIndex</a>
+        </div>
         <div className="container show-div">
           <link rel="stylesheet" href="/css/style.css"></link>
-          <a href="/">PokeIndex</a>
-          <h2> {name} </h2>
           <div className="poke-scroller">
-            <a href={`/pokemon/${prev}`}>⬅️</a>
-            <a href={`/pokemon/${next}`}>➡️</a>
+            <a className="next-poke" href={`/pokemon/${prev}`}>⬅️</a>
+            <h2 className="poke-subhead"> {name} </h2>
+
+            <a className="prev-poke" href={`/pokemon/${next}`}>➡️</a>
           </div>
-            <img src={image} alt={pokemon.name + ' image'} width={'200px'} />
+          <img
+            className={`poke-img ${inverted}`}
+            src={image}
+            alt={pokemon.name + ' image'}
+            width={'200px'} />
         </div>
+        <script src="/js/app.js" type="module" />
       </div>
     )
   }

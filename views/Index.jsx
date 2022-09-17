@@ -25,32 +25,19 @@ class Index extends React.Component {
         <div className="container index-div">
           <link rel="stylesheet" href="/css/style.css"></link>
 
-          {/* by name */}
-          {/* <ul>
+          <ul className='poke-index'>
             {pokemon.map((poke, index) => {
-              let url = `/pokemon/${poke.name}`
+              let url = `/pokemon/${index}`
               let name = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
               return (
-                <li className="index-li" key={`${poke.name} + ${poke.index}`}>
+                <li className="index-li" key={`poke-${poke.index}`}>
                   <a href={url}>{name}</a>
                 </li>
               )
             })}
-          </ul> */}
-
-          {/* by index */}
-          <ul>
-          {pokemon.map((poke, index) => {
-            let url = `/pokemon/${index}`
-            let name = poke.name.charAt(0).toUpperCase() + poke.name.slice(1)
-            return (
-              <li className="index-li" key={`${poke.name} + ${poke.index}`}>
-                <a href={url}>{name}</a>
-              </li>
-            )
-          })}
-        </ul>
+          </ul>
         </div>
+        <script src="/js/app.js" type="module" />
       </div>
     )
   }
