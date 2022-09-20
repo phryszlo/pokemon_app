@@ -26,8 +26,9 @@ class Index extends React.Component {
     return (
       <div>
         <div className="head-container">
-          <h1 className="header">Gotta Catch 'Em All</h1>
+          <h1 className="header">{name}</h1>
           <a className="poke-index-link" href="/">PokeIndex</a>
+          <a className="poke-edit-link" href={`/poke/${index}/edit`}>Edit {name}</a>
         </div>
         <div className="container show-div">
           <link rel="stylesheet" href="/css/style.css"></link>
