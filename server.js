@@ -46,21 +46,31 @@ app.get('/poke/new', (req, res) => {
 
 app.get('/poke/:index/edit', (req, res) => {
   res.render('Edit', {
-    pokemon: pokemon[req.params.index], 
+    pokemon: pokemon[req.params.index],
     index: req.params.index
   });
-}); 
+});
 
 app.post('/poke/:index/edit', (req, res) => {
   console.log(req.body);
-  pokemon.splice(req.params.index,1, req.body);
+  pokemon.splice(req.params.index, 1, req.body);
   res.render('Show', {
     pokemon: pokemon[req.params.index],
     index: req.params.index,
-    max: pokemon.length - 1,  
+    max: pokemon.length - 1,
     inverted: false
   });
-});   
+});
+app.post('/poke/:index/delete', (req, res) => {
+  console.log(req.body);
+  pokemon.splice(req.params.index, 1);
+  res.render('Show', {
+    pokemon: pokemon[req.params.index],
+    index: req.params.index,
+    max: pokemon.length - 1,
+    inverted: false  
+  });
+});
 
 app.post('/pokemon', (req, res) => {
   console.log(req.body);
@@ -68,11 +78,11 @@ app.post('/pokemon', (req, res) => {
   res.render('Index', {
     pokemon: pokemon
   });
-});   
+});
 
- 
 
- 
+
+
 
 
 

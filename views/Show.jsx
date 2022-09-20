@@ -20,8 +20,11 @@ class Index extends React.Component {
       <div>
         <div className="head-container">
           <h1 className="header">{name}</h1>
-          <a className="poke-index-link" href="/">PokeIndex</a>
-          <a className="poke-edit-link" href={`/poke/${index}/edit`}>Edit {name}</a>
+          <a className="poke-link poke-index-link" href="/">PokeIndex</a>
+          <a className="poke-link poke-edit-link" href={`/poke/${index}/edit`}>Edit {name}</a>
+          <form action={`/poke/${index}/delete`} className="delete-poke-form" method="POST">
+            <input type="submit" className="btn-delete-poke" value={`Delete ${name}`}/>
+          </form>
         </div>
         <div className="container show-div">
           <link rel="stylesheet" href="/css/style.css"></link>

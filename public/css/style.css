@@ -100,16 +100,10 @@ font-family: 'Irish Grover', cursive;
   margin-left: -2em;
 }
 
-.poke-index-link {
+.poke-link {
   color: #9ffc;
 }
-.poke-edit-link {
 
-}
-
-.poke-index-link {
-  color: #9ffc;
-}
 a {
   color: #9ffc;
   text-shadow: .2px .2px rgb(8, 59, 59);
@@ -118,11 +112,6 @@ a {
 
 a:visited {
   color: #9ffc;
-}
-
-.poke-edit-link {
-  color: #9ffc;
-  
 }
 
 .url-input {
