@@ -13,9 +13,9 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 // Middleware
-app.use((req, res, next) => {
-  next();
-})
+// app.use((req, res, next) => {
+//   next();
+// })
 
 app.use(express.urlencoded({ extended: false }));
 

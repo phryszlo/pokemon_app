@@ -1,15 +1,5 @@
 const React = require('react')
 
-const myStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  width: '100vw',
-  height: '100vh',
-  color: '#ffffff',
-  backgroundColor: '#000000',
-};
-
 class Index extends React.Component {
   render() {
     const pokemon = this.props.pokemon;
@@ -22,7 +12,10 @@ class Index extends React.Component {
     next = parseInt(index) === max ? 0 : parseInt(index) + 1
 
     let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)
-    const image = pokemon.img + '.jpg';
+
+    // only add the extension for the img if it's not already there.
+    const image = pokemon.img.endsWith('.jpg') || pokemon.img.endsWith('.png') ? pokemon.img : pokemon.img + '.jpg';
+    // const image = pokemon.img + '.jpg';
     return (
       <div>
         <div className="head-container">
